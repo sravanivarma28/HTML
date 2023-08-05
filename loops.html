@@ -1,0 +1,331 @@
+<html>
+<body>
+<h1 style="text-align:center">Loops</h1>
+<pre>
+<h2>example</h2>
+public class Anglepattern {
+public static void main(String[] args) {
+int a =1;
+
+for(int i=1;i<=4;i++) {
+		
+for(int j=1;j<=i;j++) {
+System.out.print(a+" ");
+a++;
+}
+System.out.println();
+	}}}
+otuput
+1 
+2  3 
+4  5  6 
+7  8  9  10 
+<h2>example</h2>
+public class AngleReverse {
+public static void main(String[] args) {
+     int a=9;
+
+for(int i=1;i<=4;i++) {
+	
+for(int j=1;j<=i;j++) {
+System.out.print(a+" ");
+	a--;
+		}
+System.out.println();
+}}}
+output
+9 
+8  7 
+6  5  4 
+3  2  1  0 
+
+<h2>example</h2>
+public class FirstRowMissing {
+public static void main(String[] args) {
+
+ for (int row=1;row<=3;row++) {
+for(int col=1;col<=3;col++) {
+    if(row==1&&col==1) {
+System.out.print(" ");
+	}else {
+System.out.print(row);
+		}}
+System.out.println();
+}}}
+
+otuput
+ 11
+222
+333
+
+<h2>example</h2>
+public class MiddleNumber {
+public static void main(String[] args) {
+for(int row=1;row<=3;row++) {
+for(int col=1;col<=3;col++) {
+if(row==2&&col==2) {
+System.out.print(" ");
+	}else {
+System.out.print(col);
+}}
+System.out.println();
+	}}}
+
+otuput
+
+123
+1 3
+123
+
+<h2>example</h2>
+
+public class RightAnglecolMiss {
+public static void main(String[] args) {
+for(int a=1;a<=4;a++) { 
+for(int b=1;b<=a;b++) {
+         if(a==3&&b==2) 
+System.out.print(" ");
+           else 
+System.out.print(b+" ");
+		}
+System.out.println();
+	}}}
+otuput
+1 
+1 2 
+1   3 
+1 2 3 4 
+
+<h2>example</h2>
+
+public class RightAngleTriangle {
+public static void main(String[] args) {
+for(int a=1;a<=3;a++) {
+for(int b=1;b<=a;b++) {
+			
+System.out.print(b+" ");
+//System.out.print(a+" ");
+		}
+         System.out.println():
+             }}}
+
+otuput
+1 
+1 2 
+1 2 3
+
+<h2>example</h2>
+
+public class RightTriangleReverse {
+public static void main(String[] args) {
+for(int i=5;i>=1;i--) {
+			
+for(int j=5;j>=i;j--) {
+System.out.print(i);
+//System.out.print(j+" ");
+			}
+System.out.println();
+		}}}
+
+otuput
+5 
+4 4 
+3 3 3 
+2 2 2 2 
+1 1 1 1 1 
+
+<h2>example</h2>
+
+public class SameColumns {
+public static void main(String[] args) {
+for(int a=1;a<=3;a++) {
+for(int b=1;b<=3;b++) {
+System.out.print(b+" ");
+	
+	}
+System.out.println();
+	}}}
+
+otuput
+
+1 2 3 
+1 2 3 
+1 2 3 
+
+<h2>example</h2>
+
+public class SameColumnsTriangle{
+public static void main(String[] args) {
+for(int a=4;a>=1;a--) {
+for(int b=1;b<=a;b++) {
+System.out.println(b);
+       }
+System.out.println();
+         }}}
+
+otuput
+
+1234
+123
+12
+1
+
+<h2>example</h2>
+
+public class SameRowsTriangle{
+public static void main(String[] args) {
+for(int a=4;a>=1;a--) {
+for(int b=1;b<=a;b++) {
+System.out.print(a);
+			
+		}
+System.out.println();
+	}}}
+
+otuput
+
+4444
+333
+22
+1
+
+<h2>example</h2>
+
+public class singlecolumns {
+public static void main(String[] args) {
+for(int i=1;i<=9;i=i+2) {
+System.out.println(i);
+	}}}
+
+otuput
+
+1
+3
+5
+7
+9
+
+<h2>example</h2>
+
+public class CrossStar {
+public static void main(String[] args) {
+for(int a=1;a<=3;a++) {
+for(int b=1;b<=a;b++) {
+	if(a==b)
+System.out.print("* ");
+		
+               else
+System.out.print("  ");
+	}
+System.out.println();
+              }}}
+
+otuput
+
+* 
+  * 
+    * 
+
+<h2>example</h2>
+
+public class MiddleStarMissing {
+public static void main(String[] args) {
+for(int row=1;row<=3;row++) {
+for (int col=1;col<=3;col++) {
+	if(row==2&&col==2) {
+System.out.print("  ");
+          }else {
+System.out.print(" *");	
+	}}
+System.out.println();
+			}
+		}}
+
+otuput
+
+ * * *
+ *   *
+ * * *
+
+<h2>example</h2>
+
+public class RightAngleTriangle{
+public static void main(String[] args) {
+for(int row=1;row<=3;row++) {
+for (int col=1;col<=row;col++) {
+System.out.print(" *");	
+	}
+System.out.println();
+	}}}
+
+otuput
+
+ *
+ * *
+ * * *
+
+<h2>example</h2>
+
+public class RightTriangleMissing{
+public static void main(String[] args) {
+for(int row=1;row<=4;row++) {
+for (int col=1;col<=row;col++) {
+	if(row==3&&col==2) {
+System.out.print("  ");	
+                   }else {
+System.out.print(" *");
+		}}
+System.out.println();
+		}}}
+
+
+otuput
+
+ *
+ * *
+ *   *
+ * * * *
+
+<h2>example</h2>
+
+public class sameRowsMissing{
+public static void main(String[] args) {
+for(int row=1;row<=4;row++) {
+for (int col=1;col<=4;col++) {
+	if(row==3&&col==2) {
+System.out.print("  ");	
+		}else {
+System.out.print(" *");
+             }}
+System.out.println();
+		}}}
+
+otuput
+
+ * * * *
+ * * * *
+ *   * *
+ * * * *
+
+<h2>example</h2>
+
+public class ThirdRowMissing {
+public static void main(String[] args) {
+for(int a=1;a<=3;a++) {
+for(int b=1;b<=3;b++) {
+   if(a==3&&b==2) {
+System.out.print("  ");
+	}else {
+   System.out.print(" *");
+		}}
+System.out.println();
+		}}}
+
+otuput
+
+ * * *
+ * * *
+ *   *
+</pre>
+</body>
+</html>

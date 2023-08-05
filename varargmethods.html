@@ -1,0 +1,35 @@
+<html>
+<body>
+<h1 style="text-align:center">VarargMethods</h1>
+<pre>
+<h1>Example : 1</h1>
+
+public class Vararg {
+public static void main(String[] args) {
+	
+like(8,6,4);
+like(5,6,8,9);
+	}
+static void like(int...m) {
+
+for(int c:m)
+System.out.println(c);
+	}}
+
+<h1>Example : 2</h1>
+
+public class varargs {
+public static void main(String[] args) {
+sravani(8,6,4);
+sravani(5,6,8,9);
+		}
+static void sravani(int a,int b,int...m) {
+System.out.println("hlo::" +a);
+       System.out.println("hlo::"+b);
+	for(int c:m)
+System.out.println(c);
+		}}
+
+</pre>
+</body>
+</html>

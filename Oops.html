@@ -1,0 +1,283 @@
+<html>
+<body>
+<h1 style=" text-align:center">OOPS CONCEPTS</h1>
+<ol>
+<li><h3>Data hiding</h3></li>
+<li><h3>Abstraction</h3></li>
+<li><h3>Encapsulation</h3></li>
+<li><h3>Tightly encapsulation</h3></li>
+<li><h3>Is-a-relation(or)Inheritance</h3></li>
+<li><h3>Has- a -arelation</h3></li>
+<li><h3>Method signature</h3></li>
+<li><h3>OverLoading</h3></li>
+<li><h3>Overriding</h3></li>
+<li><h3>Method Hiding</h3></li>
+<li><h3>Constructors</h3></li>
+<li><h3>Interfaces</h3></li>
+</ol>
+<h2>Data Hiding</h2>
+<pre>
+hiding of data or information,so that the outside persons cannot access directly 
+By using of private modifier we can implement data hiding
+class Example{
+private double balance;
+}
+The main advantage of datahiding is Security.
+<h2>Abstraction</h2>
+abstraction is process of hiding implementation details&showing only functionality to the users.
+admission(400 methods) enquiry(400 methods) joinstatus(400)=1200
+
+common(500)
+<h2>Inheritance</h2>
+types orfinheritance
+<ol>
+<li>Single inheritance</li>
+<li>Multiple inheritance(not support in java)</li>
+<li>Hybrid inheritance(not support in java)</li>
+<li>Multiple inheritance</li>
+<li>Hierachical inheritance</li>
+</ol>
+<h3>uses:</h3>
+>>>  code reusuability
+>>>  time saving
+>>>   by using of extends / implements
+>>>    class to class or interface to interface use extends keywors.
+>>>    class to interface use implements
+<h3>single inheritance</h3>
+
+public class Inheritance {
+public static void main(String[] args) {
+teacher t=new teacher();
+t.one();
+t.two();
+
+student s=new student();
+s.two();
+	
+}
+}
+class teacher extends student {
+public void one(){
+System.out.println("names");	
+}
+}
+class student{
+public void two() {
+System.out.println("enter");	
+}}
+<h3>multilevel inheritance</h3>
+
+public class Multilevelinheritance {
+public static void main(String[] args) {
+parentexample p=new parentexample();
+p.one();
+childexample c=new childexample();
+c.two();
+c.one();
+childexample.two();
+
+childone cd=new childone();
+cd.three();
+cd.one();
+cd.two();
+childone.two();
+
+subchild sb=new subchild();
+sb.four();
+sb.two();
+sb.one();
+childone.two();
+}}
+class parentexample {
+    public  void one() {
+System.out.println("sravani");
+  }}	
+class childexample extends parentexample {
+   public static void two() {
+System.out.println("varma");
+	}}
+class childone extends childexample{
+public void three() {
+System.out.println("raji");
+ }}
+class subchild extends childone{
+   public void four() {
+ System.out.println("chinni");
+}}
+<h3>hierachical inheritance</h3>
+
+ public class HierachicalInheritance {
+	  
+	 public static void main(String[] args) {
+	parents p=new parents();
+ p.one();
+parents.one();
+  //PARENTS TYPE CHILDONES OBJECT CAN USE ONLY PARET CLASS
+parents p1=new childones();
+p.one();
+p1.one();
+   //CHILDONES TYPE PARENTS OBJECT NOT POSSIBLE
+//childones c2=new parents();
+childones c=new childones();
+c.two();
+childones.one();
+p.one();
+p1.one();
+
+childtwo cd =new childtwo();
+cd.one();
+childtwo.one();
+cd.three();
+}}
+class parents{
+//USING STATIC METHOD PARENTS CLASS ONLY
+public static void one(){
+System.out.println("sravani");	
+	}}
+class childones extends parents{
+public void two() {
+System.out.println("varma");	
+	}}
+class childtwo extends parents{
+public void three() {
+System.out.println("golla");	
+	}}
+<h3>Encapsulation</h3>
+datahiding + abstraction
+
+<h3>Has -A -Relation</h3>
+code reusuability.helps to reduce the duplication of code.
+    
+<h4>example program</h4>
+public class HasArelationship {
+public static void main(String[] args) {
+	car c=new car();
+	c.carfunctionalities();
+}}
+//USING STATIC
+class car{
+static engine e=new engine();
+public void carfunctionalities() {
+	e.start();
+	e.stop();
+}}
+class engine{
+public static void start() {
+System.out.println("start engine");
+}
+public void stop() {
+System.out.println("stop engine");
+		}}
+<h3>Over Loading</h3>
+method names are same but different parameters method can be overloaded by change in number of parameters,or type of parameters,order of parameters
+
+<h4>example program</h4>
+
+public class MethodOverloading {
+public static void main(String[] args) {
+		
+MethodOverloading mo=new MethodOverloading();
+		mo.sravani("hlo",6);
+		mo.sravani(22,5);
+		mo.sravani();
+}
+public void sravani() {
+   System.out.println("hi");	
+	}
+    public void sravani (int a, int b) {	
+System.out.println("sravani");
+     }
+    public void sravani (String a,int b) {
+    	System.out.println("varma");	
+}}
+<h3>Overriding</h3>
+
+public class MethodOverrding {
+public static void main(String[] args) {
+	parentM P=new parentM();
+	P.one();
+	 childM c=new  childM();
+	 c.one();
+	c.two();
+	c.three();
+	parentM pm=new  childM();
+	pm.one();
+
+	// childM c1 =new parentM(); not possible
+}
+}
+class parentM{
+public void one() {
+      System.out.println("parent");
+	}}
+  class childM extends parentM{
+public void one() {
+	System.out.println("hello");
+}
+public void two() {
+	System.out.println("child");
+	
+}
+  public void three() {
+	  System.out.println("running");
+  }
+}
+
+<h3>Constructors</h3>
+it is used for given the values at object calling time.constructor will call automatically to create object
+<h4>example program</h4>
+
+public class constructors {
+public static void main(String[] args) {
+	constructors c=new constructors(33,"miss");	
+	constructors ct=new constructors(22);	
+	constructors ct1=new constructors("hlo");	
+	constructors ct2=new constructors();	
+
+}
+public constructors() {
+	}
+public constructors(float a) {
+	System.out.println("constructor is called = "+a);
+}
+public constructors(String b) {
+	System.out.println("constructor = "+b);
+}
+public constructors(int c,String b) {
+	System.out.println("constructor name = "+b);
+	System.out.println("constructor type = "+c);
+}}
+<h3>interfaces</h3>
+
+public class singleinterface {
+	
+public static void main(String[] args) {
+	
+	 parentsex p=new  parentsex(); 
+p.two();
+ students s=new parentsex();
+s.one();
+
+ teachers t= new parentsex();
+ t.one();
+ t.two();
+ //CREATE OBJECT IS NOT POSSIBLE FOR INTERFACE
+ //teachers t1=new teachers();
+}}
+interface students{
+	public void one();
+}
+interface teachers {
+	public void two();
+	public void one();
+}
+class parentsex implements students,teachers{
+	public void one() {
+	System.out.println("keep");
+	}
+public void two() {
+	System.out.println("smiling");
+	}}
+</pre>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<body>
+<h1 style="text-align:center">Exceptions</h1>
+due to some problem at the program execution is stopped process is called exception.
+<h1>Exception handling</h1>
+user wants to handle the exception this process is called exception.
+<h2>Types of exceptions</h1>
+<ol>
+<h2>checked exceptions</h2>
+An exception that is checked by the compiler at compile-time.
+<li><h4>class not found</h4></li>
+<li><h4>Io exception</h4></li>
+<li><h4>SQL exception</h4></li>
+<li><h4>filenotfound</h4></li>
+</ol>
+<h2>Unchecked exceptions</h2>
+<ol>
+<li><h4>Arithmeticexception</h4></li>
+<li><h4>Classcastexception</h4></li>
+<li><h4>Nullpointerexception</h4></li>
+<li><h4>ArrayIndexOutOfBoundexception</h4></li>
+</ol>
+
+<h3>Arithmetic exception</h3>
+<pre>
+public class AirthmeticException {
+public static void main(String[] args) {
+	one();
+      System.out.println("first method");
+		}
+public static void one() {
+	two();
+	try {
+System.out.println("program start");
+System.out.println("statement 1 ");
+System.out.println(100/0);
+System.out.println("statement 2 ");
+System.out.println("statement 3");
+			}
+catch(ArithmeticException ae) {
+System.out.println("catch handling exceptions");
+			}}
+public static void two() {
+System.out.println("program end");
+		}}
+<h3>Number format exception</h3>
+
+public class NumberFormatException {
+public static void main(String[] args) {
+		
+String s="sravani";
+		
+int i=Integer.parseInt(s);
+System.out.println(i);
+		}}
+<h3>Array index out of bound exception</h3>
+
+public class AyyayIndexOutBound {
+public static void main(String[] args) {
+
+	int a[]= {2,5,67,89};
+System.out.println(a[4]);
+	}}
+<h3>class cast exception</h3>
+
+public class ClassCastException {
+public static void main(String[] args) {
+		
+ ClassCastException ce=null;
+         String s;
+       }}
+
+<h3>exception example</h3>
+
+public class ExceptionExample {
+public static void main(String[] args) {
+    ExceptionExample e=null;
+   
+System.out.println("one ");
+System.out.println("two ");
+System.out.println("three");
+                try {
+	e.one();
+	   }
+                 catch(NullPointerException ne) {
+          System.out.println("catch block");
+		}
+System.out.println("program stop");
+}
+   String one() {
+        return "exception examples";   
+   }}
+
+<h3>throws exception</h3>
+
+public class ThrowsExample {
+public static void main(String[] args)throws Exception   {
+	one();
+	}
+public static void one()throws Exception {
+      two();
+  }
+public static void two()throws Exception  {
+    System.out.println(10/0);
+		}}
+</pre>
+</body>
+</html>

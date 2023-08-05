@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>variable</title>
+<h1 style="text-align:center">Variables</h1>
+</head>
+<body>
+<h>variables : to store temporary value in program /application in runtime</h>
+<p>datatype   variablename;//declaration</p>
+<p>datatype    variablename  =  constantvalue;</p>
+<ol>
+<li>primitive variable</li>
+<p>char   one  ='j';</p>
+<p>byte  two   =  67;</p>
+<p>short  three  =678;</p>
+<p>int    four  =  7657;</p>
+<p>long  five  = 673828l;</p>
+<p>float   six   =  45.67f;</p>
+<p>double   seven   =  677.85544;</p>
+<p> boolean  eight = eight = true;</p>
+<li>referenced variables(non primitive variables)</li>
+<pre>
+based on position variables are three types
+<ol>
+<li>Local variable</li>
+<li>Instance variable</li>
+<li>Static variable</li>
+</ol>
+<h3>local variable</h3>
+The variables which are declared inside the method or block that type of variables  are called as local variables.
+
+<h4>example</h4>
+
+public class localvariable {
+public static void main(String[] args) {
+
+	byte a= 33;
+	float b=5.6f;
+		
+System.out.println(a);
+System.out.println(b);
+	}}
+<h3>Instance variables :</h3>
+The variables which are declared inside the class out the method these are called as instance variables
+In  instance variables compulsory to create objects
+
+<h4>example</h4>
+ public class instanceexample {
+           int a=33;
+           byte b=22;
+
+public static void main(String[] args) {
+
+	//create object classname refname=new classname()
+
+  instanceexample ie=new instanceexample();
+
+	   //use refnaname.variablename
+   System.out.println(ie.a);
+   System.out.println(ie.b);
+	}}
+ 
+Instance have a default values based on dataype
+
+<h4> Instance default values example</h4>
+
+public class instancedefaultvalues {
+                      byte one;
+                      short two;
+	int three;
+	long four;
+	float five;
+	double six;
+	String seven;
+	char eight;
+	boolean nine;
+
+public static void main(String[] args) {
+
+	instancedefaultvalues idv=new instancedefaultvalues();
+
+System.out.println(idv.one);
+System.out.println(idv.two);
+System.out.println(idv.three);
+System.out.println(idv.four);
+System.out.println(idv.five);
+System.out.println(idv.six);
+System.out.println(idv.seven);
+System.out.println(idv.eight);
+System.out.println(idv.nine);
+			
+		}}
+
+<h3>Static variable</h3>
+
+variables declared within a clss outside any methhhod.with static keyword
+
+<h4>e xample</h4>
+
+public class staticexample {
+	static int a=33;
+	static boolean b=true;
+
+public static void main(String[] args) {
+
+	//create object classname refname=new classneme()
+staticexample se=new staticexample();
+			
+	//use refname.variablename
+System.out.println(se.a);
+System.out.println(se.b);
+			
+	//use static variable by using classname
+System.out.println(staticexample.a);
+System.out.println(staticexample.b);
+			
+	//use direct variablename
+System.out.println(a);
+System.out.println(b);
+		}}
+
+Instance have a default values based on dataype
+
+<h4>stattic default values example </h4>
+
+public class staticdefaultvalues {
+	static byte one;
+	static short two;
+	static int three;
+	static long four;
+	static float five;
+	static double six;
+	static String seven;
+	static char eight;
+	static boolean nine;
+
+public static void main(String[] args) {
+	//using static varible by using classname
+			
+System.out.println(one);
+System.out.println(two);
+System.out.println(staticdefaultvalues.three);
+System.out.println(four);
+System.out.println(five);
+System.out.println(staticdefaultvalues.six);
+System.out.println(seven);
+System.out.println(eight);
+System.out.println(staticdefaultvalues.nine);
+		}}
+</pre>
+</ol>
+</body>
+</html>

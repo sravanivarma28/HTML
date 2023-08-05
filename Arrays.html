@@ -1,0 +1,68 @@
+<html>
+<body>
+<h1 style="text-align:center">Arrays</h1>
+<pre>
+Declaration and creation initilization in single line
+length vs length()
+anonymous array
+</pre>
+<ol>
+<li>Array is an indexed collections of fixed no of homogeneous data elements.</li>
+<li>the main advantage of arrays we can represent multiple values under the same name</li>
+<pre>
+int  X[ ];
+int[ ]X;
+int [ ]X;
+int[ ]X=new int[7];
+
+<h2> Example : 1</h2>
+
+public class arrayforloop {
+public static void main(String[] args) {
+int teacher[]= {4,6,8};
+System.out.println(teacher[0]);
+System.out.println(teacher[1]);
+System.out.println(teacher[2]);
+			
+System.out.println("arr with for loop");
+for(int a=0;a<=teacher.length-1; a++) {
+System.out.println(teacher[a]);
+	       }
+System.out.println("arr with for each");
+for( int teachername:teacher) {
+			
+System.out.println(teachername);
+
+}}
+}
+<h2>Example : 2</h2>
+
+public class TwoDimensionalArray {
+public static void main(String[] args) {
+short sravani[][]= {{3,5},{5,6,5},{7,7}};
+System.out.println(sravani[0][1]);
+System.out.println(sravani[2][1]);
+System.out.println(sravani[1][1]);
+System.out.println("foreach loop");
+
+for(short b[]:sravani) {
+for(short chinna:b) {
+System.out.println(chinna);
+		}}}}
+<h2>Example : 3</h2>
+
+public class ThreeDimension {
+	
+public static void main(String[] args) {
+
+int [][][]me = {{{1,6,7},{5,6}},{{5,7,8},{3,6},{7,8,9}}};
+			
+for(int aa[][]:me) {				
+for(int a[]:aa) {				
+for(int b:a) {
+System.out.print(b+",");
+	}
+	}}}}
+</pre>
+</body>
+</html>
